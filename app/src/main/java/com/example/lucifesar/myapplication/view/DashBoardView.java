@@ -16,9 +16,9 @@ public class DashBoardView extends View {
 
 
     private Paint paint;
-    private float radius = Utils.dp2px(150);
+    private float radius = Utils.dp2px(75);
     private float angle = 120;
-    private float length = Utils.dp2px(100);
+    private float length = Utils.dp2px(50);
     private PathDashPathEffect effect;
     Path path;
     Path dash;
@@ -35,8 +35,8 @@ public class DashBoardView extends View {
         paint.setColor(getResources().getColor(android.R.color.black));
         paint.setStrokeWidth(Utils.dp2px(2));
         path = new Path();
-        path.addArc(getWidth()/2-radius,getWidth()/2-radius,
-                getWidth()/2+radius,getWidth()/2+radius,90+angle/2,360-angle);
+        path.addArc(getWidth()/2-radius,getHeight()/2-radius,
+                getWidth()/2+radius,getHeight()/2+radius,90+angle/2,360-angle);
         PathMeasure pathMeasure = new PathMeasure(path,false);
 
         dash = new Path();
@@ -55,18 +55,18 @@ public class DashBoardView extends View {
 
 
 
-        canvas.drawArc(getWidth()/2-radius,getWidth()/2-radius,
-                getWidth()/2+radius,getWidth()/2+radius,90+angle/2,360-angle,false,paint);
+        canvas.drawArc(getWidth()/2-radius,getHeight()/2-radius,
+                getWidth()/2+radius,getHeight()/2+radius,90+angle/2,360-angle,false,paint);
 
 
 
         paint.setPathEffect(effect);
-        canvas.drawArc(getWidth()/2-radius,getWidth()/2-radius,
-                getWidth()/2+radius,getWidth()/2+radius,90+angle/2,360-angle,false,paint);
+        canvas.drawArc(getWidth()/2-radius,getHeight()/2-radius,
+                getWidth()/2+radius,getHeight()/2+radius,90+angle/2,360-angle,false,paint);
         paint.setPathEffect(null);
 
-        canvas.drawLine(getWidth()/2,getWidth()/2,(float) (Math.cos(Math.toRadians(getAngleFromMark(10)))*length+getWidth()/2),
-                (float)(Math.sin(Math.toRadians(getAngleFromMark(10)))*length+getWidth()/2),paint);
+        canvas.drawLine(getWidth()/2,getHeight()/2,(float) (Math.cos(Math.toRadians(getAngleFromMark(10)))*length+getWidth()/2),
+                (float)(Math.sin(Math.toRadians(getAngleFromMark(10)))*length+getHeight()/2),paint);
 
 
     }
