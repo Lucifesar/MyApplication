@@ -4,18 +4,25 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.example.lucifesar.myapplication.view.DashBoardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+    <Button
+        android:id="@+id/lesson6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lesson6"
+        android:onClick="onClick"/>
 
-    <com.example.lucifesar.myapplication.view.PieChartView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+    <Button
+        android:id="@+id/lesson7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lesson7"
+        android:onClick="onClick"/>
 
-    <com.example.lucifesar.myapplication.view.AvatarView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+    <Button
+        android:id="@+id/lesson8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lesson8"
+        android:onClick="onClick"/>
+
 </LinearLayout>

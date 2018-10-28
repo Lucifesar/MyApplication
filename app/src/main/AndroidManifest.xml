@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Lesson6Activity" />
+        <activity android:name=".Lesson7Activity" />
+        <activity android:name=".Lesson8Activity" />
     </application>
 
 </manifest>

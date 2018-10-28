@@ -1,9 +1,11 @@
 package com.example.lucifesar.myapplication;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.LruCache;
+import android.view.View;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -29,6 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
         LinkedHashMap mLinkedHashMap = new LinkedHashMap();
         
+    }
+
+    public void onClick(View view){
+        Intent intent = new Intent();
+        switch (view.getId()){
+            case R.id.lesson6:
+                intent.setClass(this,Lesson6Activity.class);
+                break;
+            case R.id.lesson7:
+                intent.setClass(this,Lesson7Activity.class);
+                break;
+            case R.id.lesson8:
+                intent.setClass(this,Lesson8Activity.class);
+                break;
+        }
+
+        startActivity(intent);
     }
 
 
